@@ -1,0 +1,23 @@
+/* body {
+    background-image: url('assets/beabadoobee-half.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;  
+} */
+
+#boxes {
+    display: flex;
+    background-color:cadetblue;
+    color: cadetblue;
+}
+
+#lol {
+    background-color: aquamarine;
+    height: 100px;
+    width: 50%;
+}
+
+#beabadoobee {
+    height: 1000px;
+    width: 50%;
+}
