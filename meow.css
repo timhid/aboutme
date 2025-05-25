@@ -11,7 +11,7 @@
     color: cadetblue;
 }
 
-a {
+#beabadoobee {
     background-image: url('assets/beabadoobee-half.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -22,7 +22,7 @@ a {
     left: 0;
 }
 
-/* #youngboy {
+#youngboy {
     background-image: url('assets/youngboy-half.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -31,4 +31,4 @@ a {
     width: 50vw;
     height: 100vh;
     position: absolute;
-} */
+}
