@@ -11,13 +11,24 @@
     color: cadetblue;
 }
 
-#lol {
-    background-color: aquamarine;
-    height: 100px;
-    width: 50%;
+a {
+    background-image: url('assets/beabadoobee-half.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-#beabadoobee {
-    height: 1000px;
-    width: 50%;
-}
+/* #youngboy {
+    background-image: url('assets/youngboy-half.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 0;
+    left: 50vw;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+} */
