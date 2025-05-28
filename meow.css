@@ -1,18 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#bbfull.full {
+    /* transform: scale(0.5, 1); */
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 2000ms linear(0, 1) 
+}
+#bbfull {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+#blankbox {
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    width: 50vw;
+    height: 100vh;
+    background-color: white;
+
+}
+
 /* body {
     background-image: url('assets/beabadoobee-half.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 50% 100%;  
-} */
-
-#boxes {
-    display: flex;
-    background-color:cadetblue;
-    color: cadetblue;
-}
+}  */
 
 #beabadoobee {
-    background-image: url('assets/beabadoobee-half.jpg');
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+    background-image: url('assets/new-bb-half.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 50vw;
@@ -23,7 +51,9 @@
 }
 
 #youngboy {
-    background-image: url('assets/youngboy-half.jpg');
+    opacity: 1;
+    transition: all 4550ms linear(0, 1);
+    background-image: url('assets/new-yb-half.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     top: 0;
@@ -31,4 +61,17 @@
     width: 50vw;
     height: 100vh;
     position: absolute;
+}
+
+#youngboy.move {
+    position:absolute;
+    left: 100vw;
+    
+}
+
+#youngboy:hover {
+    opacity: 1;
+}
+#beabadoobee:hover {
+    opacity: 1;
 }
