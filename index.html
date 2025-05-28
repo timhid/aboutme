@@ -7,7 +7,7 @@
     <body>
         <!-- <p style="background-image: url('assets/youngboyxbeabadoobee.jpg');"> -->
             <img id="ybfull" src="assets/new-yb-full.png">
-            <!-- <img id="bbfull" src="assets/new-bb-full.png"> -->
+            <img id="bbfull" src="assets/new-bb-full.png">
             <div id="beabadoobee" href="aboutme.html"></div>
             <div id="youngboy" href="hobbies.html"></div>
             <audio id="stone" src="assets/stone.mp3"></audio>
@@ -28,21 +28,28 @@
         let bbfull = document.getElementById("bbfull");
         let bbhalf = document.getElementById("beabadoobee");
         const youngboy = document.getElementById("youngboy");
+        // CHANGE THIS LATER?
+        const stoneSoundLength = 4500;
+
+        // click on babadoobap
         bbhalf.addEventListener('click', (  ) => {
             // bbfull.classList.toggle('full');
             youngboy.classList.toggle('move');
             playStone();
             setTimeout(() => {
                 window.location.href = 'aboutme.html';
-            }, 4500);
+            }, stoneSoundLength);
         }, { once: true });
 
+
+        // click on my goat
         youngboy.addEventListener('click', () => {
             bbhalf.classList.toggle('move');
+            bbfull.style.setProperty('opacity', 0);
             playStone();
             setTimeout(() => {
                 window.location.href = 'hobbies.html';
-            }, 4500);
+            }, stoneSoundLength);
         }, { once: true });
 
     </script>
