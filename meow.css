@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 #bbfull.full {
@@ -20,26 +21,9 @@
     left: 0;
 }
 
-#blankbox {
-    position: absolute;
-    top: 0;
-    left: 50vw;
-    width: 50vw;
-    height: 100vh;
-    background-color: white;
-
-}
-
-/* body {
-    background-image: url('assets/beabadoobee-half.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 50% 100%;  
-}  */
-
 #beabadoobee {
     opacity: 1;
-    transition: opacity 150ms ease-in-out;
+    transition: all 4500ms linear(0, 1);
     background-image: url('assets/new-bb-half.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -52,7 +36,7 @@
 
 #youngboy {
     opacity: 1;
-    transition: all 4550ms linear(0, 1);
+    transition: all 4500ms linear(0, 1);
     background-image: url('assets/new-yb-half.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -63,10 +47,19 @@
     position: absolute;
 }
 
+#ybfull {
+    width: 100vw;
+    height: 100vh;
+}
+
+#beabadoobee.move{
+    position: absolute;
+    transform: translateX(-100%);
+}
+
 #youngboy.move {
     position:absolute;
-    left: 100vw;
-    
+    transform: translateX(100%);
 }
 
 #youngboy:hover {

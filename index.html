@@ -6,11 +6,11 @@
     <!-- note that there is only one <body> tag allowed in an html document -->
     <body>
         <!-- <p style="background-image: url('assets/youngboyxbeabadoobee.jpg');"> -->
-            <img id="bbfull" src="assets/new-bb-full.png">
+            <img id="ybfull" src="assets/new-yb-full.png">
+            <!-- <img id="bbfull" src="assets/new-bb-full.png"> -->
             <div id="beabadoobee" href="aboutme.html"></div>
-            <a id="youngboy" href="hobbies.html"></a>
+            <div id="youngboy" href="hobbies.html"></div>
             <audio id="stone" src="assets/stone.mp3"></audio>
-            <!-- <img id="yb-full" src="assets/youngboy-full.jpg"> -->
             <!-- <div id="blankbox"></div> -->
     
         
@@ -23,18 +23,27 @@
         function playStone() {
             var stone = document.getElementById("stone");
             stone.play();
+            
         }
         let bbfull = document.getElementById("bbfull");
         let bbhalf = document.getElementById("beabadoobee");
-        const move_yb = document.getElementById("youngboy");
-        bbhalf.addEventListener('click', () => {
+        const youngboy = document.getElementById("youngboy");
+        bbhalf.addEventListener('click', (  ) => {
             // bbfull.classList.toggle('full');
-            move_yb.classList.toggle('move');
+            youngboy.classList.toggle('move');
             playStone();
-        });
+            setTimeout(() => {
+                window.location.href = 'aboutme.html';
+            }, 4500);
+        }, { once: true });
 
-        document.getElementById('myButton').addEventListener('click', function() {
-        document.getElementById('myElement').classList.toggle('active');
-        });
+        youngboy.addEventListener('click', () => {
+            bbhalf.classList.toggle('move');
+            playStone();
+            setTimeout(() => {
+                window.location.href = 'hobbies.html';
+            }, 4500);
+        }, { once: true });
+
     </script>
 </html>
