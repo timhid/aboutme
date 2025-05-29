@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            body {
-                background-image: url('assets/new-bb-full.png');
-                background-attachment: fixed;
-                background-repeat: no-repeat;
-                background-size: 100% 100%;  
-            }
-        </style>
+        <link rel="stylesheet" href="aboutme.css">
     </head>    
 
-    <body>hi i am a second year software engineering student and FUARk</body>
+    <body>
+        <div class="info"id=><h3>about this page:</h3>
+            Hi I'm Tim and welcome to my profile! <br>I know this is a bit of a stretch on the theme
+                but these two lovely singers were what I thought of when I thought opposites attract.
+        </div>
+
+        <div class="info">
+            <h3>about me:</h3>
+                I am:
+                <ul>
+                    <li>20 years old</li>
+                    <li>in my second year of software engineering</li>
+                    <li>big backed - don't know when this started but my friends and I now always go for dessert after
+                        every meal, currently been loving Kuki in Darling Harbour.
+                    </li>
+                </ul>
+        </div>
+
+        <span style="color: red;">Feel free to hear some lovely tunes by babadoobap in front of you, or to go back to the landing page.</span>
+
+        <div class="watermark"><h1>THIS WEBSITE IS OWNED AND OPERATED <br>BY TIMOTHY HIDALGO</h1></div>
+
+        <button id="go_back" type="button">go back</button>
+        <button id="music">play beabadoobee :)</button>
+        <img id="youngboy" src="assets/new-yb-half.png">
+        <audio id="way_things_go" src="assets/way_things_go.mp3"></audio>
+        <audio id="stone" src="assets/stone.mp3"></audio>
+
+
+        <script>
+
+            function playStone() {
+                let stone = document.getElementById("stone");
+                stone.play();
+            }
+                       
+            let go_back = document.getElementById("go_back");
+            let youngboy = document.getElementById("youngboy");
+            let way_things_go = document.getElementById("way_things_go");
+            let music = document.getElementById("music");
+
+            music.addEventListener("click", () => {
+                way_things_go.play();
+            })
+            
+            // go back to landing
+            go_back.addEventListener("click", () => {
+                youngboy.classList.toggle("move");
+                playStone();
+                setTimeout(() => {
+                    window.location.href = 'landing.html';
+                }, 4500);
+
+            }, { once: true });
+        </script>
+    </body>
 </html>

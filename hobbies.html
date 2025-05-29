@@ -1,17 +1,80 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            body {
-                background-image: url('assets/new-yb-full.png');
-                background-attachment: fixed;
-                background-repeat: no-repeat;
-                background-size: 100% 100%;  
-            }
-        </style>
+        <link rel="stylesheet" href="hobbies.css">
     </head>
 
     <body>
-        <h1>my hobbies are fucking shitting my pants and procrastinating</h1>
+        <div id="box">
+            <h1>SOME OF MY FAVOURITE HOBBIES INCLUDE:</h1>
+            <ul>
+                <li>brazilian jiu jitsu</li>
+                <li>cycling</li>
+                <li>calisthenics</li>
+                <li>League of Legends Q_Q (I'm not that good at it lol but I still get the inkling 
+                    to play it every now and then xddd. Mostly when my friend tells me "I'm bored". I mean I know what the outcome will be 
+                    it'll end up being like 4am and I wanted to go to sleep 2 hours ago but we've gone on an 8 game loss streak so
+                    we cant end it there. And then we'll play another. and another. and another. and another. my eyes will fall
+                    heavy and my skin will start to itch. ill hear a knock at the door even though i live alone. whispers in the walls telling
+                    me to continue, and to stop. all at the same time. it aches it aches it aches oh it aches i feel the pain of a thousand
+                    lives lives i could have lived where the sun was seen and success was reached instead my body mind soul oh how they ache
+                    and tell me <br>
+                    one more game.)
+                </li>
+                <li>Instagram Reels</li>
+            </ul>
+            <button id="go_back" type="button">go back</button>
+            <button id="music" type="button">play nba youngboy</button>
+            <--- LOUD WARNING
+        </div>
+        <p id="sorry">Genuine apologies if this hurts your ears.</p>
+        
+        <div class="watermark"><h1>THIS WEBSITE IS OWNED AND OPERATED <br>BY TIMOTHY HIDALGO</h1></div>
+        <img id="beabadoobee" src="assets/new-bb-half.png">
+        <audio id="make_no_sense" src="assets/make_no_sense.mp3"></audio>
+        <audio id="stone" src="assets/stone.mp3"></audio>
+
+
+        <script>
+            function playStone() {
+                let stone = document.getElementById("stone");
+                stone.play();
+            }
+
+            function randomizeHeight() {
+                return Math.random() * 80;
+            }   
+            function randomizeWidth() {
+                return Math.random() * 100;
+            }
+
+            // change box position on load in
+            let box = document.getElementById("box");
+            box.style.setProperty("top", randomizeHeight() + "vh");
+            box.style.setProperty("left", randomizeWidth() + "vw");
+            
+            let make_no_sense = document.getElementById("make_no_sense");
+            let beabadoobee = document.getElementById("beabadoobee");
+            let go_back = document.getElementById("go_back");
+            let play_music = document.getElementById("music");
+            let sorry = document.getElementById("sorry");
+
+            // play modified make_no_sense
+            play_music.addEventListener("click", () => {
+                make_no_sense.play();
+                sorry.classList.toggle("visible");
+            })
+
+            // go back to lan
+            go_back.addEventListener("click", () => {
+                beabadoobee.classList.toggle("move");
+                playStone();
+                setTimeout(() => {
+                    window.location.href = 'landing.html';
+                }, 4500);
+
+            }, { once: true });
+        </script>
+        
     </body>
 </html>

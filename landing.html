@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="meow.css">
+        <link rel="stylesheet" href="landing.css">
     </head>
-    <!-- note that there is only one <body> tag allowed in an html document -->
     <body>
         <!-- <p style="background-image: url('assets/youngboyxbeabadoobee.jpg');"> -->
-            <img id="ybfull" src="assets/new-yb-full.png">
-            <img id="bbfull" src="assets/new-bb-full.png">
-            <div id="beabadoobee" href="aboutme.html"></div>
-            <div id="youngboy" href="hobbies.html"></div>
+            <div>
+                <img id="ybfull" src="assets/new-yb-full.png">
+                <img id="bbfull" src="assets/new-bb-full.png">
+                <div id="beabadoobee" href="aboutme.html"></div>
+                <div id="youngboy" href="hobbies.html"></div>
+                
+            </div>
             <audio id="stone" src="assets/stone.mp3"></audio>
-            <!-- <div id="blankbox"></div> -->
-    
-        
-
-        <!-- trigger an animation when the user hovers over the respective face -->
-        <!-- on click, trigger the sliding animation and go to the relevant page. -->
     </body>
 
     <script>
         function playStone() {
-            var stone = document.getElementById("stone");
+            let stone = document.getElementById("stone");
             stone.play();
             
         }
         let bbfull = document.getElementById("bbfull");
         let bbhalf = document.getElementById("beabadoobee");
         const youngboy = document.getElementById("youngboy");
-        // CHANGE THIS LATER?
         const stoneSoundLength = 4500;
 
         // click on babadoobap
